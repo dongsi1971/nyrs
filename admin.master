@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MainContent.master" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="nyrs.admin" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="leftCP" runat="server">
+    <table class="leftbox" border="0" style=" margin:5px 10px 5px 10px" cellspacing="0" cellpadding="0" width="89%">
+	<tr>
+		<td width="100%" height="30px" background="Images/leftbar.jpg" align="center" >
+        <div class="whitefont">系统数据管理</div>
+        </td>
+	</tr>
+    <tr>
+    <td align="left" valign="top">
+        <asp:TreeView ID="TreeView1" runat="server" CssClass="editlayer" 
+            ShowLines="True">
+            <Nodes>
+                <asp:TreeNode Expanded="True" ImageUrl="~/Images/rootbook.jpg" Text="基础数据维护" 
+                    Value="基础数据维护">
+                    <asp:TreeNode ImageUrl="~/Images/leafpage.jpg" Target="Right" Text="操作人员管理" Value="操作员人管理">
+                    </asp:TreeNode>
+                    <asp:TreeNode ImageUrl="~/Images/leafpage.jpg" Target="Right" Text="机构分支管理" Value="机构分支管理" 
+                        NavigateUrl="~/Admin/Organize.aspx">
+                    </asp:TreeNode>
+                    <asp:TreeNode ImageUrl="~/Images/leafpage.jpg" Target="Right" Text="客户类别管理" Value="客户类别管理">
+                    </asp:TreeNode>
+                    <asp:TreeNode ImageUrl="~/Images/leafpage.jpg" Target="Right" Text="会议主题管理" Value="会议主题管理">
+                    </asp:TreeNode>
+                    <asp:TreeNode ImageUrl="~/Images/leafpage.jpg" Target="Right" Text="业务字段管理" Value="业务字段管理">
+                    </asp:TreeNode>
+                </asp:TreeNode>
+            </Nodes>
+        </asp:TreeView>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    </td>
+    </tr>
+</table>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="rightCP" runat="server">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    	<tr>
+    		<td>
+             <asp:ContentPlaceHolder ID="rightmain" runat="server">
+    </asp:ContentPlaceHolder>
+            </td>
+    	</tr>
+    </table>
+   
+    
+</asp:Content>

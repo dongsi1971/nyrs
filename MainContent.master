@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MainContent.master.cs" Inherits="nyrs.MainContent" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+   
+    <div style="float:left;width=210px;">
+        <asp:ContentPlaceHolder ID="leftCP" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="float:left; background-color:Blue">
+     <asp:ContentPlaceHolder ID="rightCP" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
